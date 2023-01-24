@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baslik Etiketleri Kullanimi</title>
+</head>
+<body>
+<h1>Front-End Temelleri</h1> <br><br>
+<p><strong>Basliklarin sirasina gore yazinin baslik etiketleri digisir. Ornegin:</strong></p>
+<ul>
+    <li>Front-End temelleri icerisindeki HTML katagorisi h2 olur.</li>
+    <li>HTML katagorisi Icerisindeki Baslik etiketleri h3 olur.</li>
+    <li>Baslik etitekleri Icerisindeki Bilgiler katagorisi icin h4 olur.</li>
+</ul> <br><br>
+<h2>Title Etiketi</h2>
+<p>En sik goruldugu sekli browser sekmelerinin isimleri olmasidir. Ornegin " <title>Kodluyoruzla Web Ogreniyorum</title></p>
+
+<p>Arama Motorlari (Google,Yahoo,Bing) bu basliklara bakarak sitemizi listeler. bbu yuzden aciklayici 50 60 karakteri gecmeyecek sekilde (arama motorlari genelde 50 60 karakter gosterir) yazmaliyiz.</p> <br><br><br>
+<h2>Style ve Script Etiketleri</h2>
+<p>HTML dokumanlari olustururken en cok kullanacagimiz etiketler bunlardir.Bu etiketler yalnizca head etiketleri arasinda bulunmaz.</p>
+<h2><strong>Style Etiketleri</strong></h2> <br>
+<p>Style etiketleri sayfamizi guzellestiren,renkelndiren belli ozellikler Tanimlayabiliyoruz.Bu kisimlarda, bir html dokumaninda hangi alanin nerede ve nasil gorunmesi gerektigini tasarlayabiliriz. Belli kurallari olan bu belirteclere <strong>CSS</strong> diyoruz.Sayfa tasarimlarinin bulundugu bir dokuman veya bir taslak gibi dusunebiliriz. CSS ile daha fazla detayli bilgiyi <a href="https://www.w3schools.com/css/default.asp" target="_blank"></a> Alabilirsin. <hr> 
+Burada dikkat etmen gereken sey HTML dokumani islenirken ve goruntelenirken sayfa sirayla islendigi icin her zaman sirayla en altta kalan stil belirlemeleri baskin gelecektir. </p>
+<h2><strong>Script Etiketleri</strong></h2><br>
+<p>Bu etiketle web sayfalarinin,browser yardimiyla calistirabilcegi kodlar yazabiliriz. <br> <strong>Sayfamiz uzerinde hayal gucumuzle sinirli her degisikligi yapmamizi saglayan kodlar bu etiketler arasinda bulunur.</strong><br>
+Normalde HTML dokumanlarinin bir programlama dili ile yazilmadigini biliyoruz cunku HTML ve CSS birer programlama dili degildir. Ancak script taglari arasina girdigimizde Artik bir programlama dili olan <strong>javascript</strong> dunyasina giris yapmis oluyoruz.HTML dokumanlarinin stilleri yerlesimleri hatta butun dokumanin kendisi javascript ile degistirilebilir,islem yapilabilir,farkli sayfalarla veya arka planda bir veri tabaniyla haberlesebbilir oradan aldigimiz bilgilerle dokumanimizi guncelleyebiliriz. Ayrica HTML dokumanimiza yeni elemanlar ekleyip cikartabiliriz. Dokumanlarimiz uzerinde hareketli animasyonlar calisabilir <strong>HER TURLU DEGISIKLIGI YAPABILIRIZ.</strong></p> <br><br>
+<h2>Script Tag Ozellikleri</h2>
+<p>Eger script etiketi kullanirken herhangi bir ozellik eklemezsek browser sirasi geldiginde dogrudan islenir..Ve bu kisim islenmeden sayfa yuklenmeye devam etmez.Bu noktada <i>async</i> ozelligimiz devreye giriyor. Eger sayfanin yuklenmeye devam ederken eszamanli olarak bu etiketlerle belirledigimiz scriptlerin de yuklenmesini ve hazirlanmasini istiyorsak, yani bu kismin asenkron calismasini istiyorsak etiketimize bu ozelligi ekliyoruz.Herhangi bir deger girmemize gerek yok su sekilde kullanabiliriz: 
+<script src="myJavascript.js" async></script> <hr>
+Eger bu etiketin sayfa yuklendikten sonra yuklenip calistirilmasini istiyorsak o zaman async ozelliginin yanina <i>defer</i> ozelligini de eklememiz gerekiyor.Ancak bu iki ozellik de yalnizca sayfa harici kaynaktan yani bu HTML icinde yazmadigimiz javascripti yuklerken kullanabilecegimiz ozellikler. Buna da dikkat etmemiz gerekiyor. <hr>
+<strong>Sayfamiz uzerinde bu kadar guce sahip bir alanin korunmasi icin karsimiza iki ozellik cikiyor.</strong> </p>
+
+<ul><li><h3>crossorigin</h3>
+Browserlar istek sahteciligi gibi guvenlik sorunlariyla aktif sekilde mucadele ettikleri icin bir kaynaktaki dokumanin bir diger kaynaktaki (farkli domain) dokumanlara erismesinde biraz hassas davraniyorlar. Bu konuya cross origin resource sharing deniyor. kisaca CORS diyebiliriz. Iste bu etiketimiz de farkli kaynaklardaki, farkli domainlerdeki scriptleri yuklememiz icin bize yardimci oluyor. Eger bir etiketimiz de farkli kaynaklardaki, farkli domainlerdeki scriptleri yuklememiz icin bize yardimci oluyor. Eger bir kaynaktan(ayni Domain dahil)bir sey yuklemek icin belli bilgileri (Cerezler,HTTP,basit giris bilgileri etc) gondermemiz gerekiyorsa bu ozelligin degerini crossorigin="kullanici bilgileri" olarak belirtmeliyiz. Eger anonim sekilde erismemiz gerekiyorsa yani bir bilgiye ihtiyac duymuyorsak crossorigin="anonymous"olarak kullanacagiz.</li>
+<li><h3>Integrity</h3>
+Integrity,Turkceye butunluk dogruluk durustluk olarak cevrilebilir.Browser bir sekilde,sayfamizi etkileyecek kodlarin,bizim istedigimiz ekledigimiz kodlar oldugunu dogrulamasi gerekiyor. bu noktada <strong>Integrity</strong> devreye giriyor.Sayfamizda kullanacagimiz hazir kodlarin bir imzasini bu ozellige deger olarak ekliyoruz. Bu imza dogrudan kodun kendisinden olusur ve belli bir karakter uzunlugundadir.. Ayrica kodda bir harf bile degisecek olursa imza tutmayacaktir. Bu sayede kodda zararli/zararsiz herhangi bir degisiklik olursa browser imzalar uyusmayacagi icin kodlari sayfamiza yuklemeyecektir.</li></ul> <br>
+<h3><strong>Ornek olarak sunu kullanabiliriz</strong></h3>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+--->  
+<br>
+Bir diger etiketimiz de refreferrerpolicy.Bu etiket de scripti yukleyecegimiz zaman, alacagimiz kaynaga atacagimiz verileri eklemek icin kullanilir.(Crossorigin gibi kaynak paylasimi maksadiyla kullanilan ozelliklerdendir.) <br>
+
+HTML sayfalarini olustururken sayfa icerisindeki kodlar uzun olursa yazilmasi,okunmasi,incelenmesi zor olacagindan bu kodlari farkli sayfalara bolup kullanmak daha kullanisli ve daha verimli olur.Bu amacla farkli sayfalardaki scriptleri yukleyebilmek icin script etiketini kullanabiliriz. Bu amacla script etiketinin <i>src</i> ozelligini kullaniriz.Bu ozellikle hem kendi dosya sistemimizde hem de internet uzerinde herhangi bir adreste bulunan kodlari sayfamiza ekleyebiliriz.
+Ornek olarak kendi dosya sistemimizde,html dokumanimizla ayni dizinde bulunan bir script dosyasini cagirmak icin:
+<!--<script src="Javascriptimin adi.js</script>"--> <br>
+Veya bir web sayfasindaki baska bir scripti cagirmak icin:
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+--> <br>
+Son olarak da bu etiketlerle kullanabilecegimiz type ozelligi, yuklenecek dosyanin iceriginin, browser tarafindan nasil yorumlanmasi gerektigini belirtir. Ornek olarak javascript dosyasi yuklemek icin yuklenecek kodlarin javascript kodunu belirtmek icin soyle yazabiliriz: <br>
+<!--<script type="application/javascript">
+    document..getElementByID("someTestDiv").innerHTML= "This code runs as js"
+</script>-->    <br><br>
+Ya da Emascript icin: 
+<!--<script type="application/ecmascript">
+document.getElementById("someTestDiv").innerHTML = "This code runs as es";
+</script>--> br <br>
+
+<h2>Link Etiketi</h2>
+<p>Script etiketini anlatirken bir HTML dokumaninda yuklenecek kodlarin bolunmesinin bir cok kolaylik saglayacagini ogrenmistik. Iste link etiketi de script etiketinin src ozelligi ile kullanilmasi gibi link etiketini de farkli kaynaklardan farkli dosyalari HTML dokumanimiza dahil etmek icin kullanabbiliriz. Bu etiket, dokunamizda bulunmayan dis kaynaklarla dokunaminiz arasindaki iliski kurmak icin kullanilir. <br> bu etikette de crossorigin ozelligi meccuttur.
+ <br> Bu etikette iliski kurmak istedigimiz dis kaynagi href ozelligi ile veriyoruz. Bu ozelligin aciligi <strong>Hypertext REFerence</strong> seklindedir. Ornek olarak bir CSS sayfasini HTML dokumanimiz ile bbirlestirmek icin su kodu kullanabiliriz.</p> <br>
+ <!-- <link rel="stylesheet" href="style.css">-->
+ <br>
+  <p> href ozelligini hem dis kaynaklardan hem de dokumanimizin bulundugu dosyadan yapmak icin kullanabiliriz. </p> <br>
+ <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+--> <br>
+<p> Bu etiketin onemli ozelliklerinden birisi de <i>rel</i> ozelligidir. dis kaynaktaki dosyayi kendi HEML dokumanimiza ne sekilde iliskilendirmek istedigimizi belirttigimiz kisimdir. En cok kullanilan degerleri <strong>"stylesheet"</strong> ve <strong>"icon"dur.</strong> Stylesheet eklemek istedigimiz dosyanin <strong>stil</strong> dosyasi oldugunu soyler. Boylece browser oradaki komutlari HTML'imizi sekillendirmede ve degistirmede kullanir. </p> <br>
+<p>Script etiketi ile Javascript dosyalarini ekleyebiliyorduk, ancak CSS dosyalarini eklemek icin link etiketi ve rel ozelligi yardimiyla istedigimiz stil dosyasini head etiketinin arasina ekleyerek wb sayfamizi daha eglenceli hale getirebiliriz.</p> <br>
+
+<p>title etiketi yardimiyla sekmelerde gorunecek, HTML dokumanimizin baslik ismini belirtmistik. basligin yanina kucuk bir logo eklemek icin rel=icon kullaniyoruz. bulundugumuz dizinde <strong>.ico</strong> uzantili bir <strong>favicon.ico</strong> dosyamiz varsa bu dosyayi sekmelerde ismin yaninda ikon olarak gostermek uzere soyle bir kod kullanabilirsin.</p> <br>
+<!--<link rel="icon" href="/favicon.ico" type="image/x-icon">
+--> <br>
+<p>Son olarak link etiketi de type ozelligi kullanir. Bu ozellikle de iliskilendirdigimiz dosyanin tipini vermis oluyoruz. Yaygin kullanilan degerleri stil dosyalari icin type = "text/css" seklinde ikon icin de type="image/x-icon" seklindedir.</p>
+
+<h2>Meta Etiketi</h2> <br>
+<p>Tanitilacak son etiket ise <strong>meta</strong> etiketi. <br>
+Meta etiketi, bilgisayar bilimleri dunyasinda genellikle verinin verisi anlaminda kullanilir. Yani bir veriyle ilgili bilgiler meta bilgiler olarak tanimlanir. Iste HTML dokumanimizla ilgili verilerin oldugu etiketler de meta etiketleridir. Burada verecegimiz bilgiler sitemizi arama motorlarina,sosyal medyaya ve diger sitelere tanitmak ve dokumanimizla ilgili bilgiler vermek icin kullanilacak veriler olacak. </p> <br>
+<p>Sadece 4 farkli ozelligi olan meta etiketi dokumanimizla ilgili bircok bilgiyi barindiran farkli kullanim sekillerine sahip. Bu kullanimlar sayfamizla ilgili onemli bilgiler icerdigi icin ayri ayri inceleyecegiz.</p> <br>
+<ol><li>Dunyadaki farkli farkli diller ve alfabeleri goruntuleyebilmek icin browserin cozumlemesi gerekir. HTML dokumanimizdaki bu karakterlerin cozumlenme bicimini belirttigimiz meta etiketi ozelligimiz <i>charset</i> ozelligidir. Bizim latin alfabesi icin verilen charset kodu <strong>UTF-8 dir.</strong></li> <br>
+<!--<meta charset="UTF-8">
+--> <br>
+<li>Diger ozelligimiz http-equiv dir. Browserlar farkli sunuculara istek atarken belli bilgileri karsi tarafa gonderirler.. Iste bu isteklerin arasinda istedigin detaylariyla ve yontemleriyle ilgili bilgilerin oldugu header'lar bulunur.Dokumanimiz'da o dokumana ulasan birisinin browser'inde header alaninda bilgi tutmak istiyorsak bu meta etiketi ozelligini kullanabiliriz. Ornek olarak charset ile belirttigimiz ozellik HTML5 ile gelmistir. Daha onceki versiyonlarda ise su kullanim vardir: <br>
+<!--<meta http-equiv="Content-type" content="text/html" charset="UTF-8">
+-->
+
+</li> <br>
+<li> <br> Ayrica refresh basligini (Header) bu meta yardimiyla belirleyerek sayfamizin belli surede bir yenilenmesini veya belli bir sure sonra baska bir sayfaya yonlendirilmesini saglayabiliriz. <br>
+Asagidaki kodda sayfa yuklendikten 10 saniye sonra URL ile verdigimiz deger olan kodluyoruz.html e yonlendirilecek.
+<!--<meta http-equiv="refresh" content="10;URL=kodluyoruz.html">
+-->
+Burada kullandigimiz etiket de <strong> <i> content</i></strong> etiketidir. Bu da meta olarak verdigimiz bilgilerin icerigini tanimlamamizi saglar. 
+</li> <br>
+<li>Son Ozelligimiz de <strong><i>name</i></strong> ozelligidir. bu meta bilgi olarak verecegimiz bilginin tanimlayicisidir diyebiliriz. Ornek olarak sayfamizda en cok gecen harfin ne oldugunu belirtecegimiz bir meta bilgisi yazmak istersek eger:
+    <!--<meta name="enCokGecenHarf" content="a">
+--> <br>
+Bu sekilde istedigimiz meta bilgiyi sayfamizin baslik etiketleri arasinda kullanabiliriz. kullanabiliriz. <br> Ornek olarak github a sag tiklayip sayfa kaynagini goruntule dedigimizde : <!--<meta property="og:url" content="https://github.com">
+    <meta property="og:site_name" content="GitHub">
+    <meta property="og:title" content="Build software better, together">
+    <meta property="og:description" content="GitHub is where people build software. More than 50 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-mark.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">
+    <meta property="og:image" content="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="620">--> <br>
+    cikiyor. buradaki taglar facebook ve twitter paylasimlarimizda bir url paylasmak istedigimizde karsimiza cikiyor. Sosyal medyada bir url paylasmak istedigimizde url'yi kopyaladiktan sonra bir kart goruruz. bir baslik bir resim ve kisa bir aciklama bulunur. Iste o bilgiler bu meta verisinden alinir. <br> </li> </ol>
+    <p> Arama motorlari bizi meta verilerinde verilen "keywords" lere gore siralamaya alir: <br>
+    <!--<meta name="keywords" content="Kodluyoruz,programlama,web">
+--> </p>
+<br>
+<p>Ayrica arama motorlarinda sayfa basliginin altindaki aciklamalarda da yine bu meta verilerine oncelik verilir: <br>
+<!-- <meta name="description" content="Kodluyoruzla web öğrenmeye hazır mısınız?">
+ --> <br> </p>
+ <p> Bazi arama sonuclarinda yazi gorursunuz. Bu kisim da yine meta etiketinin marifetidir: <br>
+ <!--<meta name="author" content="Kodluyoruz">
+--> <br> </p>
+<p> Meta etiketiyle ilgili son sey viewport konusu. Akilli telefonlarla birlikte gelistiriciler artik farkli cihazlarla,farkli cihaz ekranlarinda duzgun gorunen kodlar yazmaya calisiyor. Her ekranin genisligi farkli boyutlari farkli oldugu icin ekran turune gore tasarim ve kodlama yapmak da bu sorunu cozmuyor. Bu yuzden farkli cihazlarda da iyi gorunen siteler yapmak icin temel gorunen alani, bu alanin genisligini vs tanimlamamiz gerekiyor. viewport burada yardim ediyor 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ --> <br>
+ Burada genisligin cihaz genisliginde oldugunu ve zoom oraninin 1.0 olacagini tarayiciya belirtmis oluyoruz. Boylece mobilde masaustu gorunumu gibi bir gorunum degil olmasi gerektigi gibi duzgun bir goruntu elde ediyoruz.
+ Meta title= baslik
+ Meta dominantcolor = en baskin renk 
+ Meta description = aciklama 
+
+</p> <br>
+<ol> <li>
+    CDN (Content Delivery Network) yardimiyla bootstrap stil ve js dosyalarini  sayfamiza eklemek istedigimizde boostrap cdn diye aratinca karsimiza yukarida ogrendigimiz link ve script etiketleriyle bootstrapi nasil ekleyecegimiz cikiyor. link etiketimizde integrity ozelligimizle imza kontrolu yaptigimizda crossorigin ozelligimizi kullandigimiza ve iliskilendirme <strong>rel/Relation</strong> turunun <strong>stylesheet</strong> olduguna dikkat edin.
+    Script etiketimizde de ayni ozellikler bulunmakta : 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ -->
+</li>
+
+<li>
+    Bu tip sayfalarla ilgili veriler icin <strong>meta</strong> 
+    kullandigimizi soylemistik. Ayrica baslik icin de <strong>title</strong> etiketini kullandigimizi soylemistik. simdi de dogru kullanimlarina bakalim
+    <!--<title>Kodluyoruz HTML</title>
+<meta name="dominantColor" content="red">
+<meta name="description" content="Kodluyoruz ile webe giris">
+-->
+</li>
+
+
+
+
+
+
+</body>
+</html>
