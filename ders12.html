@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic(Anlamlandirilmis) HTML Etiketleri Kullanimi</title>
+</head>
+<body style="background-color: sandybrown;" >
+    <style>
+        .pink {
+            color: pink;
+            font-size: larger;
+        }
+    </style>
+    <!-- Ders Baslangici -->
+<header>
+    <h1> 
+        Semantik (Anlamlandirilmis) HTML Etiketleri Kullanimi 
+    </h1>
+</header>
+<section>
+        <p>
+            Semantik, anlam veya anlamlandirma anlami ifadesi tasimaktadir. O halde semantik elementler herhangi bir anlami olan etiketler ifadesi tasimaktadir. O halde semantik elementler herhangi bir anlami olan etiketler ifadesi tasimaktadir. Semantik olarak anlamlandirilmis bir element hem tarayiciya hem gelistiriciye ne anlama geldigini acik bir sekilde belirtir. <strong>div</strong> ve <strong>span</strong> gibi elementler semantik olmayan elementlerdir ve mevcut icerigin hakkinda bilgi vermezler. <strong>form</strong>, <strong>table</strong> ve <strong>img</strong> gibi elementler semantik elementlerdir ve icerigi acikca belirler.
+        </p>
+</section>
+<section>
+    <h2><span style="color: pink;">header</span> Elementi</h2>
+        <p>
+             <strong><span style="color: pink;">header</span></strong> elementi bir dokuman veya bir <strong>section</strong> icin bir baslik oldugunu belirtir. icinde barindirdigi icerigi <strong>kapsayici</strong> olmalidir. bir dokumanda birden fazla kullanilabilir.
+             Asagidaki ornek, bir <strong>article</strong> icin bir baslik icermektedir.
+             <!-- <header> 
+                    <h1>Kodluyoruz Akademi Nedir?</h1>
+                </header>
+                <p>Her bireyin, özellikle kadınların, yükselen teknoloji sektöründe başarılı olması için eşit haklara sahip olması gerektiğine inanıyoruz.
+                Bu yüzden, Kodluyoruz Akademi gençlere dünya çapında kaliteli ve ücretsiz içerik, kaynak ve bootcamp sağlıyor!</p> 
+                -->
+        </p>
+</section>
+<section>
+    <h2><span style="color: pink;">nav</span> Elementi</h2>
+        <p>
+             <strong style="color: pink;">nav</strong> elementi aslinda nabigasyon baglantilari buyuk sayfalar icin ortaya cikarilmistir. Fakat, sayfadaki tum linkler bu element icinde olmak zorunda <strong>degildir.</strong>
+                <!-- <nav> Bootcamp CS50X Kodluyoruz Jr. Şirketler Hakkımızda </nav> -->
+        </p>
+</section>  
+<section>      
+    <h2><span style="color: pink;">section</span>Elementi</h2>
+        <p>
+             Section elementi bir dokuman icinde olan sadece bir kisim belirtir. Ornek:
+             <!-- 
+                <section>
+                <h1>CS50xKodluyoruz Challenge Başlıyor!</h1>
+                <p>CS50xKodluyoruz ödevlerine devam etmekte zorlanıyor musun? Bitirmek istediğin halde nasıl ilerleyeceğini bilmiyor musun?
+                O zaman CS50xKodluyoruz Challenge tam sana göre! Challenge ekibiyle hedefimiz: 4. haftaya kadar bütün ödevleri tamamlamak olacak!</p>
+                </section>
+                <section>
+                <h1>CS50x Nedir?</h1>
+                <p>CS50x (Computer Science 50), Harvard Üniversitesi Profesörü David J. Malan tarafından verilen efsanevi bilgisayar bilimlerine giriş kursu.
+                Her yıl milyonlarca kişi tarafından alınan bu kursu Türkçe’ye çevirsek ve Türkiye’nin her yerinden gençlere ulaştırsak nasıl olur?
+                Üstelik online ve ücretsiz olarak? Üstelik çalışma gruplarında her yaştan gencin beraber öğrenmesini destekleyerek?</p>
+                </section>
+              -->
+        </p>
+</section>
+<section>
+    <h2><span style="color: pink;">figure</span>Elementi</h2>
+        <p>
+             Icerisinde resim gosterim diyagram kod listeleri vs gibi nesnelerin oldugunu belirtir. Ana akis ile ilgili olsa da konumu ana akistan tamamen bagimsizdir. Cikartilirsa dokumanin akisini <strong>engellenemez.</strong>
+             <!-- 
+                <p>CS50x Kodluyoruz için hemen kayıt ol, dersleri anında almaya başla. Dersler tamamen online ve ücretsiz! Üstelik CS50x Kodluyoruz herkese göre.
+                İster hiç bilgisayar dersi almamış olun, ister kendinizi ilerletmek isteyin: Bu ders, sağlam bir algoritma temeli isteyen herkes için!</p>
+
+                <figure>
+	            <img src="https://cdn.sanity.io/images/9kdepi1d/production/1a22b9fada2411b7369592fd852613637834e866-5520x3680.jpg?auto=format" />
+                </figure>
+              -->
+        </p>
+</section>
+<section>
+    <h2><span class="pink">figcaption</span>Elementleri</h2>
+        <p>
+             <strong>fingcaption</strong> etiketi <strong>figure</strong> elementinin belirttigi resme baslik koymaya yarar.
+             <!-- <figcaption>
+	            <p>A duck.</p>
+	            <p><small>Photograph courtesy of News.</small></p>
+                </figcaption> -->
+        </p>
+    <h2><span class="pink">aside</span>Elementi</h2>
+        <p>
+             elementi iceriginden daha farkli olan daha baska bbazi icerikleri tanimlar. Icerigi ust icerik hakkinda olmalidir.
+        </p>
+    <h2><span class="pink">article</span>Elementi</h2>
+        <p>
+             <strong>Article</strong> Elementi, bir makale elementidir. Bir makale web sayfasinin geri kalanindan bagimsiz olarak dagitilabilmelidir.
+        </p>
+    <h2><span class="pink">footer</span>Elementi</h2>
+        <p>
+             <strong>Footer</strong> elementi bir dokuman ya da kisim icin alt bilgilerini icerir.. Bir <strong>Footer</strong> genelde dokumanin yazarini, telif haklarini, kullanim gizliligi iletisim bbilgileri vs gibbi bilgileri icerir. bir dokumanda bir kereden fazla kullanilabilir.
+        </p>
+</section>
+
+</body>
+</html>
