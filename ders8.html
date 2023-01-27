@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorsellerle Calismak</title>
+</head>
+<body> 
+    <!-- Konu Basi -->
+    <h1>Gorsellerle Calismak</h1>
+    
+    <h2>Src Kullanimi</h2>
+        <p>
+             Gorsellerle Calismak Icin img tagi kullanabiliriz<br>
+             <strong>src</strong>kismina gorselin URL ya da dosya adresi belirtilerek HTML sayfasina cagrilir.
+             <!-- Ornek:<img src="ornek.jpg"/> --> <br>
+        </p>
+    <h2>Alt Kullanimi</h2>    
+        <p>
+             Alt= in temel amaci goruntuleri goremeyen insanlar icin bir metin sunmaktir. Kullanici goruntuyu goremezse alt ozelligi ile goruntu icin alternatif bilgilendirici bir metin icerir. (goruntunun ne oldugunu soyler.)
+             <!-- Ornek: <img src="../images/kedi.jpg" alt="Yavru Kedi/>" --> <br>
+        </p>
+    <h2>Title Kullanimi</h2>    
+        <p>
+             Title ozelligi kullaniciyi bilgilendirme amaci tasir. Cursor ile gorselin uzerine gelince bu ozelligin verilen text mesaji gorunur. Ek aciklama gerektirecek resimlerde kullanabiliriz. Bilgilendirme Amaci tasir.
+             <!-- Ornek: <img src="../images/kedi.jpg" title="image"/> -->
+        </p>
+    <h2> Width Ve Height Kullanimi</h2>
+        <p>
+             Width Ve Height ozellikleri tanimlanmadigi zamanlarda gorseller sayfada gercek olcekleri ile gorunduklari icin onlari istedigin boyutlarda deger vermek istediginde bu olcu birimlerini kullanirsin. 
+             <strong>Width yatay genislik,Height ise dikey uzunluk icin kullanilir</strong>
+             <!-- Ornek:<img src="resim.jpg" width="300" />
+             <img src="resim.jpg" height="400" />
+             <img src="resim.jpg" width="300" height="600" />
+             <img src="resim.jpg" height="100%" />  -->
+        </p>    
+    <h2>Border Kullanimi</h2>
+         <p>
+             Gorseli belirtilen kalinlikta cerceve icine alir. Daha gelismis <strong>CSS Border</strong> ozelligi bunun yerine kullanilabilir.
+             <!-- Ornek: <img src="resim.jpg" border="3" /> -->
+         </p>    
+    <h2>Align Kullanimi</h2>
+         <p>
+             Web sayfasinda resmin gozukecegi pozisyonu belirlemede align ozelligi kullanilir. Bu ozellige verilebilecek deger sunlardir. <strong>left,right</strong>.Gorselin saga veya sola yasli cikmasini saglar.
+             <!-- Ornek: <img src="resim.jpg" align="right" /> -->
+         </p>
+    <h1>Gorsele Link Vermek</h1>
+         <p>
+             Gorsele Link vermek icin img tag i a taginin icerisinde kullanilir. Yonlendirilmek istenen yerin URL'i a taginin href ozelligine yazilir. Gorsel ise a taginin aciklama kismina yazilir.
+             <!-- Ornek:<a href="default.asp">
+             <img src="smiley.gif" alt="HTML tutorial" style="width:42px;  height:42px;">
+             </a> -->
+         </p>
+    <h2>map ve area</h2>
+         <p>
+             Gorsele hyperlink (href) atadigimizda gorselin tum alanina link gelecektir. map ve area etiketleri ile resmin icindeki koordinatlarla belirledigimiz bir alani sadece link haline getirebiliriz. area etiketi kadar belirlenen alani bir resim uzerinden bircok baglantiya link verebiliriz.
+             <!-- 
+             Ornekgin Instagram'da bazı satıcılarda gördüğünüz bir insan fotoğraf üzerinde pantolon ve ayakkabının ürün linklerini ayrı ayrı vermek isterseniz kullanabilirsiniz.
+             <html>
+             <body>
+             <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+             <map name="workmap">
+             <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+             <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+             <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+             </map>
+             </body>
+             </html> --> <br>
+             Ornege Buradan Ulasabilirsin: <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map2"></a>
+
+             
+         </p>
+    <h2>Onload Evint'i Kullanimi</h2>     
+         <p>
+             Bu olay gorsel yuklenmesi tamamlandiginda calisacak olan fonksiyonu belirler. <i>Herhangi bir nedenle gorsel yuklenemezse ya da belirtilen adreste resim yoksa fonksiyon calismaz.</i> <br>
+             <!-- Asagidaki ornekte gorsel yuklenmesi tamamlandiginda resimYuklendi() fonksiyonu calisacak ve ekrana Resim Yuklendi. uyarisi Javascript tarafindan bastirilacak. Bu konuyu ilerde daha detayla gorecegiz. -->
+             <!--  <html>
+             <body>
+             <img src="resim.jpg" onload="resimYuklendi()" />
+             </body>
+    
+             <script>
+             function resimYuklendi(){
+             alert("Resim yüklendi.");
+             }
+             </script>
+             </html> -->
+         </p>  
+    <h2> Picture Elementi ile Kullanim</h2>  
+         <p>
+             HTML5 ile gelen picture elementi web sayfamizda responsive image'ler kullanmamiz konusunda bize buyuk kolayliklar sagliyor.Bir tane img ve birden fazla source icerebilir. Picture tagi ekran boyutlarina gore birden cok source kullanmamizi saglar. bbu sayede ekran boyutu degistikce farkli image'leri kullanabiliriz.
+             <!-- Ornek: Burada ekran genisliginin 800 pikselden kucuk oldugu durumlarda baska diger kosullarda ise baska bir gorsel kullanilacak.
+             <picture>
+             <source srcset="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" media="(min-width: 800px)">
+    
+             <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" />
+             </picture>   -->
+             Tarayici,her bir source ogesini inceleyip eslesme saglar. Eslesme bulunamazsa veya tarayici picture ogesini desteklemiyorsa img ogesinin src URL si secilir. secilen goruntu daha sonra img ogesinin kapladigi alanda sunulur.
+             
+         </p>
+         
+
+</body>
+</html>
