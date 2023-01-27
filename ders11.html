@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Iskeletin Yapisini Anlamak</title>
+</head>
+<body>
+    <!-- Ders Basi -->
+    <h1>HTML Iskeletin Yapisini Anlamak</h1>
+    <h2>HTML Sayfalarinin en temel bilesenleri nelerdir? Bir HTML iskeleti nasil olusturulur?</h2>
+        <p>
+             Web tasarim arastirma yapan hemen hemen herkesin karsisina cikan temel kavram <strong>HTML</strong>' dir. Web sayfalarini olusturma asamasinda kullanilan standart bir metin isaret dili olan HTML acilimi <strong style="color: tomato;">"Hyper Text Markup Language"</strong> olarak bilinir. Genel bilinen yanlis kaninin aksine <strong>HTML</strong> bir programlama dili degildir. <br>
+             Bir html sayfasi olusturmadan once mutlaka <strong>HTML 5 standartlarina uygun bir html iskeleti</strong> olusturmaliyiz.
+             <!-- HTML iskelet Ornegi
+              <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                <meta charset="UTF-8">
+                <title>Page Title</title>
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                <link rel="stylesheet" href="">
+                <style>
+                </style>
+                <script src=""></script>
+                </head>
+                <body>
+
+                <img src="img_la.jpg" alt="LA" style="width:100%">
+
+                <div class="">
+                <h1>Bu bir h1 boyutunda başlık.</h1>
+                <p>Bu bir paragraf.</p>
+                <p>Bu başka bir paragraf.</p>
+                </div>
+
+                </body>
+                </html>
+                -->
+        </p>
+        <hr>
+    <h2>HTML'inizi Yapilandirma</h2>
+        <p>
+             <strong>HTML</strong> yapisinda sayfanin genel yapisini tanimlamak ve bazi basit baslik bilgilerini saglamak icin 3 farkli etiket bulunur. bunlar html head ve body her web sayfasinin temel iskeletini olusturur.
+        </p>
+    <h3>DOCTYPE Tanitici</h3>
+        <p>
+             Her sayfanin ilk satiri sayfanizin uygun oldugu HTML surumunu tanimlayan bir DOCTYPE tanimlayicisi ve bazi durumlarda, spekilasyonu tanimlayan Belge Turu Tanimini (DTD) icermelidir.
+        </p>
+    <h3>HTML Etiketi</h3>
+        <p>
+             Ilk sayfa yapisi etiketi html etiketidir. Bu dosyanin iceriginin HTML dilinde oldugunu gosterir. HTML etiketi DOCTYPE tanimlamasindan hemen sonra kullanilmalidir. Web sayfamizdaki butun metin ve HTML ogeleri HTML etiketinin baslangicinea ve bitisine yerlestirilmelidir.
+        </p>
+    <h3>Head Etiketi</h3>
+        <p>
+             head etiketi sayfayla ilgili bilgiler iceren etiketler icin bir kapsayicidir. Genellikle sayfanin head bolumunde yalnizca birkac etiket kullanilir. Sasyfanizin hicbbir metnini basliga (head etiketinin arasina) koymamalisiniz. Yine head etiketinin arasinda bulunan <strong style="color: orange;">lang</strong> anahtar kelimesinin amaci sayfa iceriginin hangi dilde olusgudur. Bunu belirtmemizin sebebbi ise arama motorlarinda bbize bu sayfayi tarayicimizin diliyle zit dustugu durumda cevirme tavsiyesi verip vermemesini saglamaktir.
+        </p>
+    <h4>head Etiketi Arasinda Bulunan Diger Anahtar Kelimelerin Gorevleri</h4>
+        <ul>
+            <li>Meta: Sayfamizi tanimlayan</li>
+            <li>Title: Tarayici penceresinin sekmesinin basligi burdan belirtiyoruz.</li>
+            <li>Sayfada kullanilan stil islemlerinin tanimlanmasi yapilir. ornegin arka plan rengi yazi rengi ya da nesnelerin hizalanmasi gibi islemler.</li>
+        </ul>
+    <h3>Body Etiketi</h3>
+        <p>
+             HTML sayfanizin icerigi <strong>body</strong>
+             etiketi icerisinde bulunur. Bu tum metni ve diger icerigi (baglantilar resimler vb) icerir. <br>Asagida ornekte etiketlerin ic ice oldugunu goreceksiniz.  
+             <!-- <! DOCTYPE html> 
+                    <html> 
+                    <head> 
+                    <title> Bu bir başlıktır.</title> 
+                    </head> 
+                    <body> 
+                    ... sayfanız ... 
+                    </body> 
+                    </html> -->
+        </p>
+</body>
+</html>
